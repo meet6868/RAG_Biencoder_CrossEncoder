@@ -1,10 +1,11 @@
-# RAG Assignment: Baseline vs. Re-Ranking
+# RAG Assignment: Comparing Retrieval and Re-Ranking Methods
 
-Two retrieval pipelines over the same chunks of the **GDPR** (EU Regulation 2016/679, 88-page PDF):
+Three pipelines over the same chunks of the **GDPR** (EU Regulation 2016/679, 88-page PDF):
 
-- **Pipeline 1 (baseline):** a Bi-Encoder (`all-MiniLM-L6-v2`) with FAISS retrieves the Top-10 chunks; the Top-3 go to the LLM → Answer 1.
-- **Pipeline 2 (re-ranking):** a Cross-Encoder (`ms-marco-MiniLM-L-6-v2`) re-sorts the same Top-10; the new Top-3 go to the LLM → Answer 2.
-- **LLM:** `Qwen2.5-3B-Instruct`, running locally. Both pipelines use the same prompt.
+- **Pipeline 1 (dense baseline):** a Bi-Encoder (`all-MiniLM-L6-v2`) with FAISS retrieves the Top-10 chunks; the Top-3 go to the LLM → Answer 1.
+- **Pipeline 2 (dense + re-ranking):** a Cross-Encoder (`ms-marco-MiniLM-L-6-v2`) re-sorts the same Top-10; the new Top-3 go to the LLM → Answer 2.
+- **Pipeline 3 (BM25 keyword retrieval):** BM25 retrieves the Top-10 chunks by keyword match; the Top-3 go to the LLM → Answer 3.
+- **LLM:** `Qwen2.5-3B-Instruct`, running locally. All pipelines use the same prompt.
 
 | File | What it is |
 |---|---|
