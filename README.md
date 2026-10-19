@@ -9,7 +9,7 @@ Two retrieval pipelines over the same chunks of the **GDPR** (EU Regulation 2016
 | File | What it is |
 |---|---|
 | `RAG_Baseline_vs_Reranking.ipynb` | The full RAG code and analysis, with outputs |
-| `report.pdf` | The report |
+| `2025201096_report.pdf` | The report |
 | `gdpr.pdf` | The source document (GDPR) |
 | `requirements.txt` | Python packages |
 
