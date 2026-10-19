@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.env
+# private files: notes, report source, results, download script, chunk/index cache
+untracked/
+# LaTeX build files
+*.aux
+*.log
+*.out
